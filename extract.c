@@ -48,8 +48,8 @@ const char * find_capture(const char * haystack, size_t len_hackstack, const cha
 }
 
 void extract_file(const char * container, const char * file_start, const char * file_end, const char * file_name) {
-	const uint32_t offset_start = container - file_start;
-	const uint32_t offset_end = container - file_end;
+	const uint32_t offset_start = file_start - container;
+	const uint32_t offset_end = file_end - container;
 	const uint32_t size_bytes = file_end - file_start;
 
 	const int fd = open(file_name, O_WRONLY|O_CREAT|O_EXCL, 0700);
