@@ -160,7 +160,8 @@ int main() {
 		first += size_from_this_page_bytes;
 	}
 
-	extract_file(content, current_file_start, current_file_end, FILE_NAMES[files_found - 1]);
+	if(files_found)
+		extract_file(content, current_file_start, current_file_end, FILE_NAMES[files_found - 1]);
 	close(fd);
 
 	free(content);
