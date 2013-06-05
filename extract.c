@@ -7,6 +7,8 @@
 **
 ** Licensed under GPL v3 or later
 */
+#define _BSD_SOURCE
+#include <endian.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -136,7 +138,7 @@ int main() {
 			break;
 		}
 
-		const uint32_t page_sequence_number = *(uint32_t *)(first + OFFSET_PAGE_SEQUENCE_NUMBER);
+		const uint32_t page_sequence_number = le32toh(*(uint32_t *)(first + OFFSET_PAGE_SEQUENCE_NUMBER));
 		if (page_sequence_number == 0) {
 			if (files_found > 0) {
 				extract_file(content, current_file_start, current_file_end, FILE_NAMES[files_found - 1]);
