@@ -151,7 +151,7 @@ int main() {
 		size_t page_segment_index = 0;
 		uint32_t size_of_all_pages_bytes = 0;
 		for (; page_segment_index < page_segment_count; page_segment_index++) {
-			const uint8_t page_size_byts = *(uint32_t *)(first + OFFSET_PAGE_SEGMENTS + page_segment_index);
+			const uint8_t page_size_byts = *(uint8_t *)(first + OFFSET_PAGE_SEGMENTS + page_segment_index);
 			size_of_all_pages_bytes += page_size_byts;
 		}
 		const uint32_t size_from_this_page_bytes = OFFSET_PAGE_SEGMENTS + page_segment_count + size_of_all_pages_bytes;
