@@ -1,0 +1,43 @@
+About
+=====
+extract-hotline-miami-soundtrack lets you extract the OGG Vorbis soundtrack files of PC game Hotline Miami, and just that.
+It was first introduced at <http://blog.hartwork.org/?p=1964>.
+
+To extract all files contained in `HotlineMiami_GL.wad`, please check <https://github.com/notandy/hotline-miami-extract>, instead.
+
+Compilation
+===========
+------------------
+$ make
+cc -std=c99 -Wall -Wextra -pedantic   -c -o extract.o extract.c
+cc   extract.o -o extract-hotline-miami-soundtrack
+------------------
+
+Usage
+=====
+------------------
+$ ./extract-hotline-miami-soundtrack
+File "ANewMorning.ogg" (offset 324769444 to 328796370, size 4026926 bytes) extracted.
+File "Crush.ogg" (offset 328796370 to 331873115, size 3076745 bytes) extracted.
+File "Crystals.ogg" (offset 331873115 to 338070714, size 6197599 bytes) extracted.
+File "Daisuke.ogg" (offset 338070714 to 342209815, size 4139101 bytes) extracted.
+File "DeepCover.ogg" (offset 342209815 to 354220376, size 12010561 bytes) extracted.
+File "ElectricDreams.ogg" (offset 354220376 to 361621106, size 7400730 bytes) extracted.
+File "Flatline.ogg" (offset 361621106 to 364436799, size 2815693 bytes) extracted.
+File "HorseSteppin.ogg" (offset 364436799 to 379380866, size 14944067 bytes) extracted.
+File "Hotline.ogg" (offset 379380866 to 384817467, size 5436601 bytes) extracted.
+File "Hydrogen.ogg" (offset 384817467 to 393673098, size 8855631 bytes) extracted.
+File "InnerAnimal.ogg" (offset 393673098 to 401464171, size 7791073 bytes) extracted.
+File "ItsSafeNow.ogg" (offset 401464171 to 407138611, size 5674440 bytes) extracted.
+File "Knock.ogg" (offset 407138611 to 414801118, size 7662507 bytes) extracted.
+File "Miami2.ogg" (offset 414801118 to 420456265, size 5655147 bytes) extracted.
+File "Musikk2.ogg" (offset 420456265 to 425787691, size 5331426 bytes) extracted.
+File "Paris2.ogg" (offset 425787691 to 433210181, size 7422490 bytes) extracted.
+File "Perturbator.ogg" (offset 433210181 to 441536474, size 8326293 bytes) extracted.
+File "Release.ogg" (offset 441536474 to 452985194, size 11448720 bytes) extracted.
+File "SilverLights.ogg" (offset 452985194 to 462700814, size 9715620 bytes) extracted.
+File "Static.ogg" (offset 462700814 to 464811086, size 2110272 bytes) extracted.
+File "ToTheTop.ogg" (offset 464811086 to 468529275, size 3718189 bytes) extracted.
+File "TurfIntro.ogg" (offset 468529275 to 472214580, size 3685305 bytes) extracted.
+File "TurfMain.ogg" (offset 472214580 to 480864247, size 8649667 bytes) extracted.
+------------------
