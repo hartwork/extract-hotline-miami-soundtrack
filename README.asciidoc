@@ -1,12 +1,15 @@
-About
-=====
-extract-hotline-miami-soundtrack lets you extract the OGG Vorbis soundtrack files of PC game Hotline Miami, and just that.
-It was first introduced at <http://blog.hartwork.org/?p=1964>.
+extract-hotline-miami-soundtrack
+================================
 
-To extract all files contained in `HotlineMiami_GL.wad`, please check <https://github.com/notandy/hotline-miami-extract>, instead.
+About
+-----
+extract-hotline-miami-soundtrack lets you extract the OGG Vorbis soundtrack files of PC game Hotline Miami, and just that.
+It was first introduced at http://blog.hartwork.org/?p=1964 .
+
+To extract all files contained in `HotlineMiami_GL.wad`, please check https://github.com/notandy/hotline-miami-extract , instead.
 
 Compilation
-===========
+-----------
 ------------------
 $ make
 cc -std=c99 -Wall -Wextra -pedantic   -c -o extract.o extract.c
@@ -14,7 +17,7 @@ cc   extract.o -o extract-hotline-miami-soundtrack
 ------------------
 
 Usage
-=====
+-----
 ------------------
 $ ./extract-hotline-miami-soundtrack
 File "ANewMorning.ogg" (offset 324769444 to 328796370, size 4026926 bytes) extracted.
