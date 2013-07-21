@@ -22,7 +22,8 @@
 
 #define WAD_PARENT_FILENAME  "hotlinemiami_v1.0.9a-Linux_28-05-2013.tar.gz"
 #define WAD_FILENAME  "HotlineMiami_GL.wad"
-#define WAD_EXPECTED_SIZE_BYTES  497702478
+#define WAD_EXPECTED_SIZE_BYTES_A  497600150
+#define WAD_EXPECTED_SIZE_BYTES_B  497702478
 
 // OGG header offsets from
 // https://en.wikipedia.org/wiki/Ogg#Page_structure
@@ -110,9 +111,11 @@ int main() {
 	struct stat props;
 	fstat(fd, &props);
 
-	if (props.st_size != WAD_EXPECTED_SIZE_BYTES) {
-		fprintf(stderr, "ERROR: Input file is not of size %d bytes.  Ideally, grab \"%s\" from \"%s\".\n",
-				WAD_EXPECTED_SIZE_BYTES, WAD_FILENAME, WAD_PARENT_FILENAME);
+	if ((props.st_size != WAD_EXPECTED_SIZE_BYTES_A)
+			&& (props.st_size != WAD_EXPECTED_SIZE_BYTES_B)) {
+		fprintf(stderr, "ERROR: Input file is neither %d nor %d bytes in size.  Ideally, grab \"%s\" from \"%s\".\n",
+				WAD_EXPECTED_SIZE_BYTES_A, WAD_EXPECTED_SIZE_BYTES_B,
+				WAD_FILENAME, WAD_PARENT_FILENAME);
 		return 1;
 	}
 
